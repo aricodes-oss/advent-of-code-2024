@@ -9,4 +9,6 @@ with open("input", "r") as f:
         a.append(lhs)
         b.append(rhs)
 
+# This would be much quicker using a collections.Counter,
+# but for a one-off execution we don't care about timing
 print(sum([el * b.count(el) for el in a]))
